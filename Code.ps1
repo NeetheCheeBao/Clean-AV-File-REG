@@ -1,13 +1,14 @@
-<#彻底删除指定文件扩展名的所有注册表关联。
-以管理员身份运行#>
+<# Windows PowerShell 5.1.22621.2506#>
+# 彻底删除指定文件扩展名的所有注册表关联
+# 以管理员身份运行
 
-# 彻底删除指定文件扩展名的所有注册表关联,以管理员身份运行
+# 定义变量
 $extensions = @(
     "avi", "wmv", "wmp", "wm", "asf", "mpg", "mpeg", "mpe", "m1v", "m2v",
     "mpv2", "mp2v", "ts", "tp", "tpr", "trp", "vob", "ifo", "ogm", "ogv",
     "mp4", "m4v", "m4p", "m4b", "3gp", "3gpp", "3g2", "3gp2", "mkv", "rm",
-    "ram", "rmvb", "rpm", "flv", "mov", "qt", "nsv", "dpg", "m2ts", "m2t",
-    "mts", "dvr-ms", "k3g", "skm", "evo", "nsr", "amv", "divx", "webm",
+    "ram", "rmvb", "rpm", "flv", "mov", "qt", "nsv", "dpg", "m2ts"， "m2t",
+    "mts", "dvr-ms", "k3g", "skm", "evo", "nsr", "amv", "divx", "webm"，
     "wtv", "f4v", "mxf", "wav", "wma", "mpa", "mp2", "m1a", "m2a", "mp3",
     "ogg", "m4a", "aac", "mka", "ra", "flac", "ape", "mpc", "mod", "ac3",
     "eac3", "dts", "dtshd", "wv", "tak", "cda", "dsf", "tta", "aiff", "aif",
@@ -44,7 +45,7 @@ function Remove-RegistryPath {
 }
 
 # 处理每个扩展
-foreach ($ext in $extensions) {
+foreach ($ext 在 $extensions) {
     $extWithDot = ".$ext"
     $log += "`n----- Processing: $extWithDot -----"
 
